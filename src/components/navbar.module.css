@@ -1,0 +1,22 @@
+.contener {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1em;
+  list-style: none;
+  max-width: 50%;
+}
+.navbar-item {
+  border: 1px darkslateblue solid;
+  border-radius: 50%;
+  background-color: rebeccapurple;
+  text-align: center;
+  padding: 1em;
+  font-size: 18px;
+  font-weight: 900;
+}
+.navbar-text {
+  color: white;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  text-decoration: none;
+}

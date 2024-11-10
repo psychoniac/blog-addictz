@@ -1,0 +1,11 @@
+.contener {
+  max-width: 500px;
+  min-height: 100vh;
+  margin: auto;
+  background-color: azure;
+  padding: 5rem;
+}
+.title {
+  padding-left: 2em;
+  font-size: 30px;
+}

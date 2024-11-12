@@ -1,0 +1,12 @@
+.contener-posts {
+  display: flex;
+  justify-content: space-around;
+  gap: 3rem;
+  flex-wrap: wrap;
+  margin: auto;
+}
+.card-post {
+  width: 250px;
+  height: 300px;
+  border: 1px solid black;
+}

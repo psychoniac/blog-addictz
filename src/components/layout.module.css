@@ -1,13 +1,13 @@
 .contener {
-  max-width: 500px;
+  max-width: 700px;
   min-height: 100vh;
   margin: auto;
   background-color: azure;
   padding: 5rem;
 }
 .contener-page {
-  max-width: 80%;
   min-height: 100vh;
+  margin: auto;
 }
 
 .title {

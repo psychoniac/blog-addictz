@@ -7,20 +7,29 @@ const BlogPage = ({ data }) => {
   return (
     <Layout pageTitle="Mes posts">
       <h2>Mes derniers posts</h2>
-      <ul>
-        {data.allFile.nodes.map((node) => (
-          <li key={node.name}>{node.name}</li>
+      <div>
+        {data.allMdx.nodes.map((node) => (
+          <article key={node.id}>
+            <h3>{node.frontmatter.title}</h3>
+            <p>Posted: {node.frontmatter.date}</p>
+            <p>{node.excerpt}</p>
+          </article>
         ))}
-      </ul>
+      </div>
     </Layout>
   );
 };
 
 export const query = graphql`
   query {
-    allFile(filter: { sourceInstanceName: { eq: "blog" } }) {
+    allMdx(sort: { frontmatter: { date: DESC } }) {
       nodes {
-        name
+        frontmatter {
+          title
+          date(formatString: "MMMM D, YYYY")
+        }
+        id
+        excerpt
       }
     }
   }

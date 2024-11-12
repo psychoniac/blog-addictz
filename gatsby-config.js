@@ -3,7 +3,10 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `blog addictz`,
+    title: `Blog addictz`,
+    description: `Un blog créer par un addict pour les addicts qui se posent des questions.`,
+    twitterUsername: `@psychoniac`,
+    image: `./src/images/avatar.png`,
     siteUrl: `https://www.yourdomain.tld`,
   },
   plugins: [
@@ -13,21 +16,11 @@ module.exports = {
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {
-      // plugin qui permet d'extraire des données du système de fichiers de l'oridnateur
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "images",
-        path: "./src/images/",
+        name: `blog`,
+        path: `src/blog/`,
       },
-      __key: "images",
-    },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "pages",
-        path: "./src/pages/",
-      },
-      __key: "pages",
     },
   ],
 };

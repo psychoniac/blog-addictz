@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Link } from "gatsby";
 import { contener, navbarItem, navbarText } from "./navbar.module.css";
+
 const Navbar = () => {
   return (
     <nav>
@@ -10,6 +11,13 @@ const Navbar = () => {
             Homepage
           </Link>
         </li>
+
+        <li className={navbarItem}>
+          <Link to="/blog" className={navbarText}>
+            Mes posts
+          </Link>
+        </li>
+
         <li className={navbarItem}>
           <Link to="/about" className={navbarText}>
             A propos
